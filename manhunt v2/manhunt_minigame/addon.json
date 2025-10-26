@@ -1,0 +1,14 @@
+{
+	"title": "Manhunt Minigame",
+	"type": "ServerContent",
+	"tags": [ "fun", "roleplay", "realism" ],
+	"dependencies": {
+		"2820026045": "Nexus Library v2",
+		"2910505837": "ARC9 - Escape from Tarkov"
+	},
+	"ignore": [
+		"*.git*",
+		"*.md",
+		"*.txt"
+	]
+}

@@ -1,31 +1,33 @@
 # Manhunt Minigame - Garry's Mod Addon
 
-🎯 Een spannende Manhunt minigame addon voor Garry's Mod waarbij één speler de jager (hunter) is en de ander de voortvluchtige (fugitive). Een intense kat-en-muis spel met tactical gameplay en geavanceerde features!
+🎯 Een spannende Manhunt minigame addon voor Garry's Mod waarbij één speler de jager (hunter) is en de ander de voortvluchtige (fugitive). Een intense kat-en-muis spel met tactical gameplay en geavanceerde features! 
+
+🔥 **Solo Mode**: Perfect voor testen - speel tegen jezelf en track je eigen positie!
 
 ## 📋 Vereisten
 
 - **Garry's Mod** (natuurlijk!)
-- **GMinimap Addon**: Vereist voor minimap functionaliteit
-  - 🔗 Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3024317004
-  - ⚠️ **BELANGRIJK**: Zorg dat GMinimap geïnstalleerd en werkend is!
+- **Geen externe dependencies!** 🎉
+  - ✅ Minimap volledig geïntegreerd
+  - ✅ Zelfstandige addon - geen extra installaties nodig
 
 ## 🚀 Installatie
 
 ### Methode 1: Via Steam Workshop (Aanbevolen)
 1. Subscribe naar de addon op Steam Workshop
-2. Zorg dat GMinimap ook gesubscribed is
-3. Start Garry's Mod opnieuw op
+2. Start Garry's Mod opnieuw op
+3. Klaar! 🎮
 
 ### Methode 2: Handmatige Installatie
 1. Download en plaats de `manhunt_minigame` folder in:
    - `steamapps/common/GarrysMod/garrysmod/addons/`
-2. Installeer GMinimap in dezelfde directory
-3. Start je server/game opnieuw op
+2. Start je server/game opnieuw op
 
 ## ✅ Installatie Verificatie
 Console moet tonen:
 ```
 [Manhunt] Minigame addon loaded successfully!
+[Manhunt] Integrated minimap system loaded
 [Manhunt] Server network strings registered
 [Manhunt] Client initialized
 ```
@@ -34,19 +36,35 @@ Console moet tonen:
 
 ### 🚀 Het spel starten
 
-#### Optie 1: Via Spawnmenu (Aanbevolen)
-1. Druk **Q** (spawnmenu)
-2. Ga naar **Utilities** tab
-3. Klik **Manhunt** in zijbalk
-4. Selecteer **Game Settings**
-5. Klik **Open Configuration Panel**
+**Alle commands worden via console uitgevoerd (druk `~` om console te openen):**
 
-#### Optie 2: Via Console
+#### Basis Commands:
 ```
-manhunt_menu
+manhunt_help                                    - Toont alle commands
+manhunt_players                                 - Lijst beschikbare spelers  
+manhunt_start <tijd> <interval> <hunter_naam>   - Start het spel
+manhunt_reset                                   - Reset huidige spel
 ```
 
-### ⚙️ Configuratie Panel
+#### Voorbeelden:
+```
+manhunt_start 300 30 PlayerName    // 5 min game, ping elke 30s
+manhunt_start 600 45 PlayerName    // 10 min game, ping elke 45s  
+manhunt_start 900 60 PlayerName    // 15 min game, ping elke 60s
+manhunt_start 300 30 MijnNaam      // Solo mode (test jezelf)
+```
+
+#### Stap-voor-stap:
+1. **Controleer spelers:** `manhunt_players`
+2. **Start spel:** `manhunt_start 600 45 HunterNaam`
+3. **Reset indien nodig:** `manhunt_reset`
+
+### 🎯 Solo Mode
+Perfect voor testen! Gebruik je eigen naam als hunter:
+```
+manhunt_start 300 30 JouwEigenNaam
+```
+Je speelt tegen jezelf en ziet je eigen positie op de minimap.
 
 Het moderne configuratiepanel bevat:
 
@@ -136,7 +154,7 @@ Het moderne configuratiepanel bevat:
 - **👻 Spectator Mode**: Dode fugitive volgt hunter camera
 - **🎨 Modern UI**: Clean, spaced design met hover effects
 - **🔄 Live Updates**: Real-time player list, status updates
-- **🎯 GMinimap Integration**: Seamless minimap activation/deactivation
+- **🎯 Integrated Minimap**: Built-in minimap system with player tracking
 
 ## 🎨 HUD Elementen
 
@@ -178,20 +196,21 @@ manhunt_minigame/
 
 ### ❌ Veelvoorkomende Problemen
 
-**🗺️ "GMinimap not found!"**
-- ✅ Controleer GMinimap installatie
-- ✅ Herstart Garry's Mod volledig  
-- ✅ Check console: `[GMinimap] ...` berichten
-- ✅ Test GMinimap apart: `gminimap` command
+**🗺️ "Minimap werkt niet"**
+- ✅ Check console: `[Manhunt] Integrated minimap...` berichten
+- ✅ Herstart Garry's Mod volledig
+- ✅ Controleer dat manhunt_minigame correct geïnstalleerd is
+- ✅ Minimap toont automatisch tijdens game
 
 **🚫 "Spel start niet"**
-- ✅ Minimaal 2 spelers vereist
+- ✅ Minimaal 1 speler vereist (solo mode mogelijk!)
 - ✅ Alleen admins kunnen starten
-- ✅ Selecteer geldige hunter in dropdown
+- ✅ Gebruik exacte speler naam uit `manhunt_players`
 - ✅ Check console voor error messages
 
 **👻 "Minimap verschijnt niet"**
-- ✅ GMinimap moet eerst geactiveerd zijn
+- ✅ Minimap verschijnt automatisch tijdens spel
+- ✅ Alleen hunter ziet minimap tijdens actieve fase
 - ✅ Hunter moet correct geselecteerd zijn  
 - ✅ Wacht tot interval timer afloopt
 - ✅ Check of je daadwerkelijk de hunter bent
@@ -252,7 +271,7 @@ Deze addon is gemaakt voor educatieve doeleinden en vrij gebruik in Garry's Mod.
 
 ## 🤝 Credits
 
-- Afhankelijk van GMinimap addon voor minimap functionaliteit
+- Volledig zelfstandige addon met geïntegreerde minimap
 - Gemaakt voor Garry's Mod spelers
 
 ---

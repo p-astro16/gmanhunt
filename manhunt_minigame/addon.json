@@ -1,0 +1,10 @@
+{
+	"title": "Manhunt Minigame",
+	"type": "ServerContent",
+	"tags": [ "fun", "roleplay", "realism" ],
+	"ignore": [
+		"*.git*",
+		"*.md",
+		"*.txt"
+	]
+}
